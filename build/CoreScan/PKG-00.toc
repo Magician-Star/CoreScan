@@ -1,0 +1,85 @@
+('/home/gabriel/Área de trabalho/Ambiente '
+ 'SPYDER/CoreScan/build/CoreScan/CoreScan.pkg',
+ {'BINARY': True,
+  'DATA': True,
+  'EXECUTABLE': True,
+  'EXTENSION': True,
+  'PYMODULE': True,
+  'PYSOURCE': True,
+  'PYZ': False,
+  'SPLASH': True,
+  'SYMLINK': False},
+ [('pyi-contents-directory _internal', '', 'OPTION'),
+  ('PYZ-00.pyz',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/build/CoreScan/PYZ-00.pyz',
+   'PYZ'),
+  ('lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so',
+   '/home/gabriel/anaconda3/lib/python3.12/lib-dynload/_struct.cpython-312-x86_64-linux-gnu.so',
+   'EXTENSION'),
+  ('lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so',
+   '/home/gabriel/anaconda3/lib/python3.12/lib-dynload/zlib.cpython-312-x86_64-linux-gnu.so',
+   'EXTENSION'),
+  ('struct',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/build/CoreScan/localpycs/struct.pyc',
+   'PYMODULE'),
+  ('pyimod01_archive',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/build/CoreScan/localpycs/pyimod01_archive.pyc',
+   'PYMODULE'),
+  ('pyimod02_importers',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/build/CoreScan/localpycs/pyimod02_importers.pyc',
+   'PYMODULE'),
+  ('pyimod03_ctypes',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/build/CoreScan/localpycs/pyimod03_ctypes.pyc',
+   'PYMODULE'),
+  ('pyiboot01_bootstrap',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/loader/pyiboot01_bootstrap.py',
+   'PYSOURCE'),
+  ('pyi_rth_inspect',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth_inspect.py',
+   'PYSOURCE'),
+  ('pyi_rth_localhost_fletd',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/flet_cli/__pyinstaller/rthooks/pyi_rth_localhost_fletd.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgutil',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth_pkgutil.py',
+   'PYSOURCE'),
+  ('pyi_rth_multiprocessing',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth_multiprocessing.py',
+   'PYSOURCE'),
+  ('pyi_rth_traitlets',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/_pyinstaller_hooks_contrib/rthooks/pyi_rth_traitlets.py',
+   'PYSOURCE'),
+  ('pyi_rth_pkgres',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth_pkgres.py',
+   'PYSOURCE'),
+  ('pyi_rth_setuptools',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth_setuptools.py',
+   'PYSOURCE'),
+  ('pyi_rth__tkinter',
+   '/home/gabriel/Área de trabalho/Ambiente '
+   'SPYDER/CoreScan/.coreScan/lib/python3.12/site-packages/PyInstaller/hooks/rthooks/pyi_rth__tkinter.py',
+   'PYSOURCE'),
+  ('App',
+   '/home/gabriel/Área de trabalho/Ambiente SPYDER/CoreScan/app/App.py',
+   'PYSOURCE')],
+ 'libpython3.12.so.1.0',
+ True,
+ False,
+ False,
+ [],
+ None,
+ None,
+ None)

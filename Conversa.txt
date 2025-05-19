@@ -1,0 +1,128 @@
+Se quiser empacotar agora como .AppImage, .deb, ou gerar instalador para Windows, posso te ajudar com isso também. Deseja seguir com alguma dessas opções?
+Você disse:
+quero fazer os tres, .AppImage, .deb e o insttalador para windows
+O ChatGPT disse:
+
+Excelente escolha! Abaixo está o guia para empacotar o CoreScan nos três formatos desejados:
+📦 1. EMPACOTAR COMO .AppImage (Linux portátil)
+✅ Pré-requisitos:
+
+sudo apt install appimagetool libfuse2
+
+🧱 Estrutura recomendada:
+
+Organize assim:
+
+CoreScan.AppDir/
+├── AppRun
+├── CoreScan           ← seu executável PyInstaller
+├── assets/            ← mesma pasta usada no seu app
+├── icons/
+│   └── corescan-logo.png
+├── core-scan.desktop
+
+🔧 Passo a passo:
+1. Crie o script AppRun:
+
+#!/bin/bash
+HERE="$(dirname "$(readlink -f "$0")")"
+exec "$HERE/CoreScan"
+
+Dê permissão:
+
+chmod +x AppRun
+
+2. Crie o .desktop:
+
+core-scan.desktop:
+
+[Desktop Entry]
+Name=CoreScan
+Exec=CoreScan
+Icon=icons/corescan-logo
+Type=Application
+Categories=Utility;
+
+3. Gere o .AppImage:
+
+appimagetool CoreScan.AppDir
+
+Saída esperada: CoreScan-x86_64.AppImage
+📦 2. EMPACOTAR COMO .deb (pacote instalável para distros Debian/Ubuntu)
+✅ Estrutura recomendada:
+
+core-scan_1.0.0/
+├── DEBIAN/
+│   └── control
+├── usr/
+│   └── bin/
+│       └── CoreScan
+├── usr/share/applications/
+│   └── core-scan.desktop
+├── usr/share/icons/hicolor/64x64/apps/
+    └── corescan-logo.png
+
+🔧 Passos:
+1. Crie o arquivo control em DEBIAN/:
+
+Package: core-scan
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: amd64
+Depends: libc6 (>= 2.27)
+Maintainer: Seu Nome <email@dominio.com>
+Description: Visualizador de informações do sistema (CoreScan)
+
+2. Copie seu executável para usr/bin/CoreScan e dê permissão:
+
+chmod 755 usr/bin/CoreScan
+
+3. Gere o .deb:
+
+dpkg-deb --build core-scan_1.0.0
+
+Saída: core-scan_1.0.0.deb
+📦 3. INSTALADOR PARA WINDOWS (.exe)
+✅ Opções:
+
+    🅰️ Com PyInstaller (manual) — gera apenas .exe
+
+    🅱️ Com Inno Setup — gera instalador profissional .exe
+
+🅰️ Método rápido: PyInstaller no Windows
+
+    Em um ambiente Windows (VM ou PC), ative seu venv e rode:
+
+pyinstaller CoreScan.spec
+
+    Isso gera o .exe em dist/CoreScan/CoreScan.exe
+
+🅱️ Método profissional: Inno Setup
+1. Instale o Inno Setup:
+
+https://jrsoftware.org/isinfo.php
+2. Crie o script .iss:
+
+[Setup]
+AppName=CoreScan
+AppVersion=1.0
+DefaultDirName={pf}\CoreScan
+DefaultGroupName=CoreScan
+OutputDir=dist
+OutputBaseFilename=CoreScanInstaller
+Compression=lzma
+SolidCompression=yes
+
+[Files]
+Source: "dist\CoreScan\CoreScan.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "dist\CoreScan\assets\*"; DestDir: "{app}\assets"; Flags: recursesubdirs
+
+[Icons]
+Name: "{group}\CoreScan"; Filename: "{app}\CoreScan.exe"
+
+3. Compile no Inno Setup.
+
+Saída: CoreScanInstaller.exe
+🚀 Deseja que eu gere modelos prontos para cada estrutura? Posso te enviar .AppRun, .desktop, .control e .iss já preenchidos. Deseja isso?
+

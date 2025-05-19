@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=CoreScan
+Exec=CoreScan
+Icon=corescan-logo
+Type=Application
+Categories=Utility;
+Terminal=false
+Comment=
+Path=
+StartupNotify=false
