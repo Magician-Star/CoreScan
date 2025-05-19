@@ -29,7 +29,7 @@ jobs:
           pyinstaller --onefile App.py --name CoreScan
 
       - name: Upload do artefato .exe
-        uses: actions/upload-artifact@v2.3.1
+        uses: actions/upload-artifact@8dc59c7c5ac114c4baf152e94b3a8e4cd585e1d8
         with:
           name: CoreScan-Windows
           path: dist/CoreScan.exe
