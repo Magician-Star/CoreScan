@@ -1,0 +1,33 @@
+name: Build EXE for Windows
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependências
+        run: pip install pyinstaller flet
+
+      - name: Compilar com PyInstaller
+        run: |
+          pyinstaller --onefile main.py --name CoreScan
+
+      - name: Upload do artefato .exe
+        uses: actions/upload-artifact@v3
+        with:
+          name: CoreScan-Windows
+          path: dist/CoreScan.exe
