@@ -24,7 +24,7 @@ jobs:
 
       - name: Compilar com PyInstaller
         run: |
-          pyinstaller --onefile main.py --name CoreScan
+          pyinstaller --onefile App.py --name CoreScan
 
       - name: Upload do artefato .exe
         uses: actions/upload-artifact@v3
