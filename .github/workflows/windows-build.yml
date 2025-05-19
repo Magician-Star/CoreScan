@@ -20,14 +20,17 @@ jobs:
           python-version: '3.10'
 
       - name: Instalar dependências
-        run: pip install pyinstaller flet
+        run: |
+          pip install --upgrade pip
+          pip install pyinstaller flet
 
       - name: Compilar com PyInstaller
         run: |
           pyinstaller --onefile App.py --name CoreScan
 
       - name: Upload do artefato .exe
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: CoreScan-Windows
           path: dist/CoreScan.exe
+
